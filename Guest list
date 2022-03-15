@@ -32,5 +32,4 @@ while flag:
     
 for guest in guests:
     guest_obj = Id(guest["name"], guest["surname"], guest["town"], guest["status"])
-
-print(guest_obj)
+    print(guest_obj)
