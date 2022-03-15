@@ -5,6 +5,7 @@ class Visitor:
         self.town = town
         self.status = status
     
+class Id (Visitor):
     def __str__(self):
         return f'{self.name} {self.surname} г.{self.town} статус: "{self.status}"'
 
@@ -18,12 +19,18 @@ while flag:
     town = input ('Пожалуйста, введите город поситителя:')
     status = input ('Пожалуйста, введите статус поситителя:')
     
-    guest = {"name": name, "surname": surname, "town": town, "status":status}
-    
     guests.append({"name": name, "surname": surname, "town": town, "status":status})
-    flag = False
+    
+    i = input('Добавить ещё одного поситителя? Введите букву y или n')
+    
+    if n == "y":
+        return
+    elif n == "n":
+        flag = False
+    else:
+        return i
     
 for guest in guests:
-    guest_obj = Visitor(guest["name"], guest["surname"], guest["town"], guest["status"])
+    guest_obj = Id(guest["name"], guest["surname"], guest["town"], guest["status"])
 
 print(guest_obj)
