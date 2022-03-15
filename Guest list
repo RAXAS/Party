@@ -23,12 +23,12 @@ while flag:
     
     i = input('Добавить ещё одного поситителя? Введите букву y или n')
     
-    if n == "y":
-        return
-    elif n == "n":
+    if n == str(y):
+        continue
+    elif n == str(n):
         flag = False
     else:
-        return i
+        i = input('Добавить ещё одного поситителя? Введите букву y или n: ')
     
 for guest in guests:
     guest_obj = Id(guest["name"], guest["surname"], guest["town"], guest["status"])
