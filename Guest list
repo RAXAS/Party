@@ -1,0 +1,29 @@
+class Visitor:
+    def __init__(self, name, surname, town, status):
+        self.name = name
+        self.surname = surname
+        self.town = town
+        self.status = status
+    
+    def __str__(self):
+        return f'{self.name} {self.surname} г.{self.town} статус: "{self.status}"'
+
+guests = []
+
+flag = True
+
+while flag:
+    name = input ('Пожалуйста, введите имя поситителя:')
+    surname = input ('Пожалуйста, введите фамилию поситителя:')
+    town = input ('Пожалуйста, введите город поситителя:')
+    status = input ('Пожалуйста, введите статус поситителя:')
+    
+    guest = {"name": name, "surname": surname, "town": town, "status":status}
+    
+    guests.append({"name": name, "surname": surname, "town": town, "status":status})
+    flag = False
+    
+for guest in guests:
+    guest_obj = Visitor(guest["name"], guest["surname"], guest["town"], guest["status"])
+
+print(guest_obj)
