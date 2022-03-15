@@ -14,21 +14,21 @@ guests = []
 flag = True
 
 while flag:
-    name = input ('Пожалуйста, введите имя поситителя :')
+    name = input ('Пожалуйста, введите имя поситителя: ')
     surname = input ('Пожалуйста, введите фамилию поситителя: ')
     town = input ('Пожалуйста, введите город поситителя: ')
     status = input ('Пожалуйста, введите статус поситителя: ')
     
     guests.append({"name": name, "surname": surname, "town": town, "status":status})
     
-    i = str(input('Добавить ещё одного поситителя? Введите букву y или n: '))
+    i = input('Добавить ещё одного поситителя? Введите букву y или n: ')
     
-    if n == str(y):
+    if i == "y":
         continue
-    elif n == str(n):
+    elif i == "n":
         flag = False
     else:
-        i = input('Добавить ещё одного поситителя? Введите букву y или n: ')
+        print("Введен не верный ответ")
     
 for guest in guests:
     guest_obj = Id(guest["name"], guest["surname"], guest["town"], guest["status"])
